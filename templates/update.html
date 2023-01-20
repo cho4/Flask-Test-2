@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+
+{% block body %} 
+<div class="container">
+    <h1>update person</h1>
+
+    <form class="form-inline" action="/update/{{ id }}" method="POST">
+        <div class="form-group row">
+            <div class="col-xs-3">
+                <label for="name">New Name</label>
+                <input type="text" id="name" class="form-control" placeholder='{{ old_name }}' name="name">
+            </div>
+            <div class="col-xs-2">
+                <label for="age">New Age</label>
+                <input type="text" id="age" class="form-control" placeholder='{{ old_age }}' name="age">
+            </div>
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
